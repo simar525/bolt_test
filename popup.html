@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voila AI Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Voila AI Clone</h1>
+    <textarea id="selectedText" rows="5" placeholder="Selected text will appear here"></textarea>
+    <div id="prebuiltPrompts">
+      <button data-prompt="improve">Improve Writing</button>
+      <button data-prompt="grammar">Fix Grammar</button>
+      <button data-prompt="summarize">Summarize</button>
+    </div>
+    <div id="customPrompts"></div>
+    <input type="text" id="newPrompt" placeholder="Enter custom prompt">
+    <button id="addPrompt">Add Custom Prompt</button>
+    <div id="result"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+(()=>{let e="";document.addEventListener("mouseup",(()=>{e=window.getSelection().toString().trim(),chrome.runtime.sendMessage({action:"updateSelectedText",text:e})})),chrome.runtime.onMessage.addListener(((t,n,d)=>{"getSelectedText"===t.action&&d({selectedText:e})}))})();

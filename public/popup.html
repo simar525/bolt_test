@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karas AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-900">
+  <div id="app" class="p-8 w-[1200px]">
+    <h1 class="text-3xl font-bold mb-8 text-center text-gray-900">Karas AI</h1>
+    <div class="space-y-8">
+      <div class="space-y-2">
+        <label for="selectedText" class="block text-sm font-medium text-gray-700">Selected Text</label>
+        <textarea id="selectedText" rows="5" class="w-full px-4 py-3 text-[15px] rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-black" placeholder="Selected text will appear here"></textarea>
+      </div>
+      
+      <div class="flex justify-between items-center space-x-4">
+        <div id="modelSelection" class="flex space-x-6">
+          <label class="inline-flex items-center">
+            <input type="radio" name="model" value="gpt-4o" checked class="form-radio text-black">
+            <span class="ml-2 text-[15px] text-gray-700 whitespace-nowrap">GPT-4o</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="model" value="gpt-4o-mini" class="form-radio text-black">
+            <span class="ml-2 text-[15px] text-gray-700 whitespace-nowrap">GPT-4o-mini</span>
+          </label>
+        </div>
+        
+        <div id="apiKeySection" class="flex items-center space-x-2 flex-grow">
+          <input type="password" id="apiKey" class="flex-grow px-4 py-2 text-[15px] rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter OpenAI API key">
+          <button id="saveApiKey" class="px-4 py-2 text-[15px] font-medium text-white bg-black rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">Save</button>
+          <button id="removeApiKey" class="px-4 py-2 text-[15px] font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2">Remove</button>
+        </div>
+      </div>
+      
+      <div id="promptsSection" class="space-y-4">
+        <h3 class="text-xl font-semibold text-gray-900">Prompts</h3>
+        <div id="prebuiltPrompts" class="flex flex-wrap gap-3">
+          <button data-prompt="improve" class="prompt-btn">Improve Writing</button>
+          <button data-prompt="grammar" class="prompt-btn">Fix Grammar</button>
+          <button data-prompt="summarize" class="prompt-btn">Summarize</button>
+        </div>
+        <div id="customPrompts" class="flex flex-wrap gap-3"></div>
+        
+        <div id="addCustomPrompt" class="flex items-center space-x-2 mt-4">
+          <input type="text" id="newPrompt" class="flex-grow px-4 py-2 text-[15px] rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter custom prompt">
+          <button id="addPrompt" class="px-4 py-2 text-[15px] font-medium text-white bg-black rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">Add</button>
+        </div>
+      </div>
+      
+      <div id="result" class="space-y-2">
+        <h3 class="text-xl font-semibold text-gray-900">Result</h3>
+        <div class="flex items-center">
+          <div id="resultContent" class="flex-grow min-h-[150px] p-4 rounded-lg border border-gray-300 bg-white text-[15px] text-gray-900"></div>
+          <button id="copyResult" class="ml-2 px-3 py-2 text-[15px] font-medium text-white bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">
+            Copy
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

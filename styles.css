@@ -1,0 +1,22 @@
+body {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+textarea, input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#result {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  min-height: 50px;
+}

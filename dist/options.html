@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karas AI Options</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <div class="container mx-auto p-8 max-w-2xl">
+    <h1 class="text-3xl font-bold mb-8 text-center text-gray-100">Karas AI Options</h1>
+    <div class="bg-gray-800 rounded-lg shadow-xl p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-200">Custom Keyboard Shortcut</h2>
+      <div class="flex items-center space-x-4 mb-4">
+        <input type="text" id="customShortcut" class="flex-grow px-4 py-2 text-[15px] rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-600" placeholder="e.g., Ctrl+Shift+K">
+        <button id="saveShortcut" class="px-4 py-2 text-[15px] font-medium text-gray-100 bg-gradient-to-r from-gray-700 to-gray-600 rounded-lg hover:from-gray-600 hover:to-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 focus:ring-offset-gray-900">Save</button>
+      </div>
+      <p class="text-sm text-gray-400">Current shortcut: <span id="currentShortcut"></span></p>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

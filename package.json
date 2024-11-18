@@ -1,0 +1,19 @@
+{
+  "name": "voila-ai-clone",
+  "version": "1.0.0",
+  "description": "A Chrome extension similar to Voila AI",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "dotenv-webpack": "^7.0.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
